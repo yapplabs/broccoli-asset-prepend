@@ -2,21 +2,6 @@
   "name": "broccoli-asset-prepend",
   "version": "0.0.1",
   "description": "broccoli asset prepending (rewrite assets references)",
-  "main": "lib/asset-prepend.js",
-  "files": [
-    "lib/",
-    "index.js"
-  ],
-  "ember-addon": {
-    "main": "index.js"
-  },
-  "scripts": {
-    "test": "mocha tests"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/yapplabs/broccoli-asset-prepend"
-  },
   "keywords": [
     "broccoli",
     "broccoli-plugin",
@@ -27,12 +12,24 @@
     "cdn",
     "ember-addon"
   ],
-  "author": "Luke Melia",
-  "license": "MIT",
+  "homepage": "https://github.com/yapplabs/broccoli-asset-prepend",
   "bugs": {
     "url": "https://github.com/yapplabs/broccoli-asset-prepend/issues"
   },
-  "homepage": "https://github.com/yapplabs/broccoli-asset-prepend",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yapplabs/broccoli-asset-prepend"
+  },
+  "license": "MIT",
+  "author": "Luke Melia",
+  "main": "lib/asset-prepend.js",
+  "files": [
+    "lib/",
+    "index.js"
+  ],
+  "scripts": {
+    "test": "mocha tests"
+  },
   "dependencies": {
     "broccoli-asset-rewrite": "github:yapplabs/broccoli-asset-rewrite#feature/enable-caching-option",
     "broccoli-stew": "^3.0.0",
@@ -40,6 +37,29 @@
   },
   "devDependencies": {
     "broccoli-fixture": "^1.0.0",
-    "mocha": "^8.2.0"
+    "mocha": "^8.2.0",
+    "release-it": "^14.2.0",
+    "release-it-lerna-changelog": "^3.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "ember-addon": {
+    "main": "index.js"
+  },
+  "release-it": {
+    "plugins": {
+      "release-it-lerna-changelog": {
+        "infile": "CHANGELOG.md",
+        "launchEditor": false
+      }
+    },
+    "git": {
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true,
+      "tokenRef": "GITHUB_AUTH"
+    }
   }
 }
