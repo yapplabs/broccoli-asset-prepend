@@ -1,0 +1,8 @@
+*.swp
+.DS_Store
+.git
+.gitignore
+.npmignore
+node_modules/
+*.log
+tests/

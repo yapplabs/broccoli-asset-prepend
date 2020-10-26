@@ -1,0 +1,45 @@
+{
+  "name": "broccoli-asset-prepend",
+  "version": "0.0.1",
+  "description": "broccoli asset prepending (rewrite assets references)",
+  "main": "lib/asset-prepend.js",
+  "files": [
+    "lib/",
+    "index.js"
+  ],
+  "ember-addon": {
+    "main": "index.js"
+  },
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yapplabs/broccoli-asset-prepend"
+  },
+  "keywords": [
+    "broccoli",
+    "broccoli-plugin",
+    "asset",
+    "rev",
+    "fingerprint",
+    "cloudfront",
+    "cdn",
+    "ember-addon"
+  ],
+  "author": "Luke Melia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yapplabs/broccoli-asset-prepend/issues"
+  },
+  "homepage": "https://github.com/yapplabs/broccoli-asset-prepend",
+  "dependencies": {
+    "broccoli-asset-rewrite": "github:yapplabs/broccoli-asset-rewrite#feature/enable-caching-option",
+    "broccoli-stew": "^3.0.0",
+    "glob": "^7.1.6"
+  },
+  "devDependencies": {
+    "broccoli-fixture": "^1.0.0",
+    "mocha": "^8.2.0"
+  }
+}
