@@ -36,7 +36,8 @@
     "glob": "^7.1.6"
   },
   "devDependencies": {
-    "broccoli-fixture": "^1.0.0",
+    "broccoli-test-helper": "^2.0.0",
+    "chai": "^4.2.0",
     "mocha": "^8.2.0",
     "release-it": "^14.2.0",
     "release-it-lerna-changelog": "^3.0.0"
